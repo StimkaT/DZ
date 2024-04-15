@@ -1,0 +1,14 @@
+@for (card of cardList; track card) {
+<div class="container">
+  <img class="img" src={{card.img}} alt="Image">
+  <div class="content">
+    <h2 class="title">{{card.name}}</h2>
+    <div class="description-cost">
+      <p class="description">{{card.description}}</p>
+      <p class="cost">{{card.cost}}</p>
+    </div>
+  </div>
+</div>
+} @empty {
+  Empty list of users
+}

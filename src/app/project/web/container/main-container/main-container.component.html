@@ -1,0 +1,15 @@
+  <mat-drawer-container class="example-container" >
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      @for (product of productList$|async; track product) {
+        <button mat-button color="primary">{{ product.name }}</button><br>
+      } @empty {
+        Empty list of users
+      }
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Catalog
+      </button>
+    </div>
+    <card></card>
+  </mat-drawer-container>
