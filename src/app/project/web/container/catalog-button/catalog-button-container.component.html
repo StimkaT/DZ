@@ -1,0 +1,5 @@
+@for (product of catalogList; track product) {
+  <button mat-button color="primary" (click)="buttonClick(product.link)">{{ product.name }}</button><br>
+} @empty {
+  Empty list of users
+}

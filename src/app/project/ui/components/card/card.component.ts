@@ -1,14 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { IProduct } from '../../../web/state/catalog/catalog.reduser';
+import { IProduct } from '../../../web/state/products/products.reduser';
 
 @Component({
-  selector: 'card',
+  selector: 'card-component',
   standalone: true,
-  imports: [MatGridListModule],
+  imports: [],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-  // @Input() cardList: IProduct[]|null = [];
+  @Input() card!: IProduct;
 }

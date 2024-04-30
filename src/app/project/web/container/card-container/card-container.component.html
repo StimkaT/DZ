@@ -1,0 +1,5 @@
+@for (card of (products$|async); track card) {
+<card-component [card]="card"></card-component>
+} @empty {
+    Empty list of users
+  }

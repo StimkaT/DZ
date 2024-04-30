@@ -1,0 +1,11 @@
+<mat-drawer-container class="example-container" >
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <ng-content select=[catalogButtolnList]></ng-content>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Catalog
+      </button>
+    </div>
+    <ng-content select=[cardList]></ng-content>
+</mat-drawer-container>

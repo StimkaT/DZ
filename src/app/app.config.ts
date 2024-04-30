@@ -8,6 +8,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideState, provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { catalogReducer } from './project/web/state/catalog/catalog.reduser';
+import { productsReducer } from './project/web/state/products/products.reduser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +19,6 @@ export const appConfig: ApplicationConfig = {
     provideStore(), 
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
     provideState('catalog', catalogReducer),
+    provideState('products', productsReducer),
   ]
 };
